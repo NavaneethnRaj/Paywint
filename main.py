@@ -1,6 +1,11 @@
+from typing import List
+from datetime import datetime, timedelta
 from fastapi import FastAPI, Depends
-from database import SessionLocal, Base, engine 
+from sqlalchemy.orm import Session
+from database import SessionLocal, Base, engine
+import model as models
 from schemas import ExpenseCreate, ExpenseResponse
+import schemas
 
 app = FastAPI()
 
